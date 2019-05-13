@@ -1,4 +1,4 @@
-FROM php:7.1-apache
+FROM php:7.3-apache
 LABEL maintainer="Thomas Bruederli <thomas@roundcube.net>"
 
 RUN set -ex; \
@@ -15,6 +15,7 @@ RUN set -ex; \
 		libpq-dev \
 		libsqlite3-dev \
 		zlib1g-dev \
+		libzip-dev \
 	; \
 	\
 	debMultiarch="$(dpkg-architecture --query DEB_BUILD_MULTIARCH)"; \
